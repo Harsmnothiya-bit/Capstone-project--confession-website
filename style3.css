@@ -1,0 +1,286 @@
+.container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.navbar-brand {
+    font-size: 50px;
+}
+
+.nav-item {
+    font-size: 20px;
+}
+
+form {
+    width: 100%;
+    margin: 30px;
+}
+
+table {
+    width: 300%;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-top: 30px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #ccc;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+form input,
+form select {
+    width: 65%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+form input[type="submit"] {
+    width: 100px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 45px;
+    text-align: left;
+}
+
+th {
+    background-color: #ddd;
+}
+
+.update-button,
+.delete-button {
+    margin-right: 5px;
+}
+
+@media (max-width: 992px) {
+    form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form input,
+    form select {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    form input[type="submit"] {
+        margin-top: 20px;
+    }
+}
+
+.btn {
+    padding: 5px 5px;
+    border-radius: 1px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn {
+    padding: 9px 50px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+}
+
+.btn-light {
+    background-color: #f8f9fa;
+    color: #212529;
+    border: 1px solid #ddd;
+}
+
+.btn-dark {
+    background-color: #343a40;
+    color: white;
+    border: none;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px #ccc;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+    font-size: 16px;
+}
+
+#categorySelect {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+    font-size: 16px;
+}
+
+#submitButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#submitButton:hover {
+    background-color: #3e8e41;
+}
+
+#selectedCategory {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    form {
+        align-items: flex-start;
+    }
+}
+
+
+In this example,
+buttons are created using the button element and given different classes to apply styles using CSS. The styles include padding,
+border radius,
+font size,
+text transform,
+letter spacing,
+cursor,
+background color,
+color,
+border,
+and other styles that make the buttons look good and work properly. The :hover selector is used to add a style for when the buttons are hovered over. In this example,
+the submit button is created using the input element with a type attribute set to "submit" . The value attribute is set to "Submit" . The button is given the classes "btn" and "btn-primary" to apply styles using CSS. The styles include padding,
+border radius,
+font size,
+text transform,
+letter spacing,
+cursor,
+background color,
+color,
+and border. The :hover selector is used to add a style for when the button is hovered over.
