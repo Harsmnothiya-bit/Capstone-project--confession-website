@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Confessions Website</title>
+  </head>
+  
+  <body>
+    
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <a class="navbar-brand" href="#">Confessions</a>
+    </nav>
+    <div class="container mt-5">
+      <h2>Add a Confession</h2>
+      <form>
+        <div class="form-group">
+          <label for="date">Date:</label>
+          <input type="date" class="form-control" id="date">
+        </div>
+        <div class="form-group">
+            <form action="connect.php" methode="post"></form>
+          <label for="category">Category:</label>
+          <input type="text" class="form-control" id="category">
+          <!-- HTML code to create the category dropdown -->
+<label for="category">Category:</label>
+<select id="category" name="category">
+  <option value="general">General</option>
+  <option value="Academic">Academic</option>
+  <option value="Personal">Personal</option>
+  <option value="Romance">Romance</option>
+  <option value="guilty">Guilty</option>
+  <option value="Other">Other</option>
+  
+</select>
+
+        </div>
+        <div class="form-group">
+          <label for="text">Text:</label>
+          <textarea class="form-control" id="text" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <h2 class="mt-5">Previous Confessions</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Category</th>
+            <th>Text</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="confessions-table">
+          <!-- Confessions will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+    <script>
+      
+        $(document).ready(function() {
+  
+  // Submit confession form
+  $("form").submit(function(event) {
+    event.preventDefault();
+    let date = $("#date").val();
+    let category = $("#category").val();
+    let text = $("#text").val();
+    let confession = { date, category, text };
+    addConfessionToTable(confession);
+  });
+
+  // Add confession to table
+  function addConfessionToTable(confession) {
+    let tableRow = `
+      <tr>
+        <td>${confession.date}</td>
+        <td>${confession.category}</td>
+        <td>${confession.text}</td>
+        <td>
+          <button class="update-button btn btn-primary">Update</button>
+          <button class="delete-button btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    `;
+    $("#confessions-table").append(tableRow);
+  }
+
+  // Update confession
+  $(document).on("click", ".update-button", function() {
+    let currentRow = $(this).closest("tr");
+    let date = currentRow.find("td:eq(0)").text();
+    let category = currentRow.find("td:eq(1)").text();
+    let text = currentRow.find("td:eq(2)").text();
+    $("#date").val(date);
+    $("#category").val(category);
+    $("#text").val(text);
+    currentRow.remove();
+  });
+
+  // Delete confession
+  $(document).on("click", ".delete-button", function() {
+    $(this).closest("tr").remove();
+  });
+});
+
+
+</script>
+  </body>
+</html>
